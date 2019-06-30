@@ -43,7 +43,11 @@ defmodule MediumGraphqlApi.MixProject do
       {:plug_cowboy, "~> 2.0"},
       {:comeonin, "~> 5.1"},
       # Argon2 is the strongest algorithm. Other options are bcrypt and pbkdf2
-      {:argon2_elixir, "~> 2.0"}
+      {:argon2_elixir, "~> 2.0"},
+      {:absinthe, "~> 1.4"},
+      {:absinthe_plug, "~> 1.4"},
+      {:absinthe_ecto, "~> 0.1.3"},
+      {:absinthe_phoenix, "~> 1.4"}
     ]
   end
 
