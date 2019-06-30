@@ -7,11 +7,13 @@ defmodule MediumGraphqlApiWeb.Router do
 
   scope "/api", MediumGraphqlApiWeb do
     pipe_through(:api)
+  end
+
+  scope "/api" do
+    forward("/graphql", Absinthe.Plug, schema: MediumGraphqlApiWeb.Schema)
 
     if Mix.env() == :dev do
       forward("/graphiql", Absinthe.Plug.GraphiQL, schema: MediumGraphqlApiWeb.Schema)
-    else
-      forward("/graphql", Absinthe.Plug, schema: MediumGraphqlApiWeb.Schema)
     end
   end
 end
