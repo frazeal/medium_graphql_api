@@ -2,8 +2,8 @@ use Mix.Config
 
 # Configure your database
 config :medium_graphql_api, MediumGraphqlApi.Repo,
-  username: "frazeal",
-  password: "admin",
+  username: "postgres",
+  password: "postgres",
   database: "medium_graphql_api_test",
   hostname: "localhost",
   pool: Ecto.Adapters.SQL.Sandbox
