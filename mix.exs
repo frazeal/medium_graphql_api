@@ -47,7 +47,10 @@ defmodule MediumGraphqlApi.MixProject do
       {:absinthe, "~> 1.4"},
       {:absinthe_plug, "~> 1.4"},
       {:absinthe_ecto, "~> 0.1.3"},
-      {:absinthe_phoenix, "~> 1.4"}
+      {:absinthe_phoenix, "~> 1.4"},
+      {:guardian, "~> 1.2"}
+      # {:json_web_token, "~> 0.2.10"},
+      # {:joken, "~> 2.1"}
     ]
   end
 

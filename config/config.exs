@@ -25,6 +25,13 @@ config :logger, :console,
 # Use Jason for JSON parsing in Phoenix
 config :phoenix, :json_library, Jason
 
+# Configures Guardian (authentication)
+config :medium_graphql_api, MediumGraphqlApi.Guardian,
+  issuer: "medium_graphql_api",
+  secret_key: "5k9ed7vpTuy0I+TtYqp6FxyblJXJfj/kf3b3aH1GArPIVSTwA7ZDi2QueOAFl5iR"
+
+# secret_key: "Secret key. You can use `mix guardian.gen.secret` to get one"
+
 # Import environment specific config. This must remain at the bottom
 # of this file so it overrides the configuration defined above.
 import_config "#{Mix.env()}.exs"
